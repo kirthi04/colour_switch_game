@@ -905,8 +905,12 @@ for(i=0; i<(myobstyp4.length) ;i++)
     {
        colorchange[i].speedY = 1 + 0.25*(Math.floor((myGameArea.frameNo)/3000));
     }}}
+     document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 38) {
+        moveup();
+}});
 </script>
-<div> <button onclick="moveup()">UP</button><br><br>
+<div>
     <button onclick="myGameArea.upd()">RESUME</button>
     <button onclick="myGameArea.stop()">PAUSE</button>   
 </div>
